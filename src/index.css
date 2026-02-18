@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+
+/* About hero moving center lines (lightweight) */
+@keyframes about-scan {
+  0%   { transform: translateX(-35%); opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { transform: translateX(135%); opacity: 0; }
+}
+
+.aboutLine{
+  position:absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:38%;
+  transform: translateX(-35%);
+  animation: about-scan 6.8s linear infinite;
+  filter: blur(0.2px);
+  opacity: 0;
+  will-change: transform, opacity;
+  border-radius: 9999px;
+}
+
+.aboutLine--emerald{
+  animation-delay: 0s;
+  background: linear-gradient(90deg, transparent, rgba(52,211,153,0.28), rgba(52,211,153,0.10), transparent);
+}
+.aboutLine--rose{
+  animation-delay: 1.2s;
+  background: linear-gradient(90deg, transparent, rgba(251,113,133,0.26), rgba(251,113,133,0.10), transparent);
+}
+.aboutLine--sky{
+  animation-delay: 2.4s;
+  background: linear-gradient(90deg, transparent, rgba(56,189,248,0.24), rgba(56,189,248,0.10), transparent);
+}
+.aboutLine--violet{
+  animation-delay: 3.6s;
+  background: linear-gradient(90deg, transparent, rgba(167,139,250,0.22), rgba(167,139,250,0.10), transparent);
+}
+
+
+
+
+/* About Sec 5: subtle background motion (lightweight) */
+@keyframes about-blob-float {
+  0% { transform: translate3d(-50%, 0, 0) scale(1); opacity: 1; }
+  50% { transform: translate3d(-50%, 18px, 0) scale(1.03); opacity: 0.95; }
+  100% { transform: translate3d(-50%, 0, 0) scale(1); opacity: 1; }
+}
+
+@keyframes about-blob-float-2 {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(-16px, 22px, 0) scale(1.03); }
+  100% { transform: translate3d(0, 0, 0) scale(1); }
+}
+
+@keyframes about-blob-float-3 {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(18px, -16px, 0) scale(1.02); }
+  100% { transform: translate3d(0, 0, 0) scale(1); }
+}
+
+.aboutBlobFloat { animation: about-blob-float 9s ease-in-out infinite; }
+.aboutBlobFloat2 { animation: about-blob-float-2 10.5s ease-in-out infinite; }
+.aboutBlobFloat3 { animation: about-blob-float-3 12s ease-in-out infinite; }
+
+@keyframes about-grid-move {
+  0% { background-position: 0 0, 0 0; }
+  100% { background-position: 0 120px, 120px 0; }
+}
+.aboutGridMove { animation: about-grid-move 18s linear infinite; }
+
+/* process line fill */
+@keyframes about-line-fill {
+  0% { transform: scaleX(0); opacity: 0.6; }
+  100% { transform: scaleX(1); opacity: 1; }
+}
+.aboutLineFill {
+  transform-origin: left;
+  animation: about-line-fill 1.2s ease-out both;
+}
+
+
+
+@keyframes about-cta-float {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(16px, 18px, 0) scale(1.03); }
+  100% { transform: translate3d(0, 0, 0) scale(1); }
+}
+@keyframes about-cta-float-2 {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(-14px, -16px, 0) scale(1.03); }
+  100% { transform: translate3d(0, 0, 0) scale(1); }
+}
+.aboutCtaFloat { animation: about-cta-float 10s ease-in-out infinite; }
+.aboutCtaFloat2 { animation: about-cta-float-2 11.5s ease-in-out infinite; }
+
+
+
+
+/* Contact Hero: dark grid motion (visible on light bg) */
+@keyframes contact-grid-move {
+  0% { background-position: 0 0, 0 0; }
+  100% { background-position: 0 160px, 160px 0; }
+}
+.contactGridMove { animation: contact-grid-move 18s linear infinite; }
+
+/* Diagonal sweep bands (no circles) */
+@keyframes contact-sweep {
+  0% { transform: translateX(-60%) rotate(12deg); opacity: 0; }
+  12% { opacity: 1; }
+  88% { opacity: 1; }
+  100% { transform: translateX(160%) rotate(12deg); opacity: 0; }
+}
+
+.contactSweep{
+  position:absolute;
+  top:-25%;
+  left:-40%;
+  height:150%;
+  width:34%;
+  border-radius: 9999px;
+  opacity: 0;
+  will-change: transform, opacity;
+  animation: contact-sweep 7.8s linear infinite;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(2,6,23,0.18),
+    rgba(2,6,23,0.08),
+    transparent
+  );
+}
+
+.contactSweep--1{ animation-delay: 0s; }
+.contactSweep--2{ animation-delay: 1.7s; }
+.contactSweep--3{ animation-delay: 3.4s; }
