@@ -20,6 +20,11 @@ import Ecommerce from "./pages/platforms/Ecommerce";
 import Careers from "./pages/Careers";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Blogs from "./pages/Blogs";
+import ScalableArchitecture from "./pages/blogs/ScalableArchitecture";
+import BlogDetail from "./pages/blogs/BlogDetail";
+import PremiumTemplates from "./pages/PremiumTemplates/PremiumTemplates";
+
 
 
 
@@ -57,9 +62,10 @@ export default function App() {
         <Route path="/platforms/mobile-platforms" element={<MobilePlatforms />} />
         <Route path="/platforms/e-commerce" element={<Ecommerce />} />
 
-      
-        <Route path="/premium-templates" element={<Placeholder title="Premium Templates"/>} />
-        <Route path="/blogs" element={<Placeholder title="Blogs"/>} />
+
+        <Route path="/premium-templates" element={<PremiumTemplates />} />
+
+        <Route path="/blogs" element={<Blogs />} />
         <Route path="/careers" element={<Careers />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
@@ -71,7 +77,8 @@ export default function App() {
 <Route path="/services/onsite-search" element={<OnsiteSearch />} />
 
 <Route path="/projects" element={<Projects />} />
-
+<Route path="/blogs/scalable-architecture" element={<ScalableArchitecture />} />
+<Route path="/blogs/:slug" element={<BlogDetail />} />
 
 
         <Route path="/expertise/:slug" element={<ExpertiseDetail />} />

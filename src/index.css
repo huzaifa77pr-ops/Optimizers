@@ -137,3 +137,16 @@
 .contactSweep--1{ animation-delay: 0s; }
 .contactSweep--2{ animation-delay: 1.7s; }
 .contactSweep--3{ animation-delay: 3.4s; }
+
+
+
+@keyframes scanline {
+  0% { transform: translateX(-60%); opacity: .25; }
+  20% { opacity: .55; }
+  100% { transform: translateX(10%); opacity: .25; }
+}
+
+@keyframes ticker {
+  0% { transform: translateX(-12%); }
+  100% { transform: translateX(12%); }
+}
