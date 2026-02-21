@@ -93,6 +93,7 @@ export default function Footer() {
               <li><Link to="/projects" className="hover:text-emerald-400 transition">Projects</Link></li>
               <li><Link to="/careers" className="hover:text-emerald-400 transition">Careers</Link></li>
               <li><Link to="/contact" className="hover:text-emerald-400 transition">Contact</Link></li>
+              <li><Link to="/premium-templates" className="hover:text-emerald-400 transition">Premium Templates</Link></li>
             </ul>
           </div>
 
